@@ -81,26 +81,17 @@
         <a href="guide.html" style="display: block; margin-bottom: 20px;">
             Полезное
         </a>
+        <a href="login.html" style="display: block; margin-bottom: 20px;">
+            Авторизация
+        </a>
 
 
 
 
-        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#quickOrder">
-            Быстрый заказ
+        <button data-modal="loginModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Вход или регистрация
         </button>
 
-
-        <code>
-
-            @@include
-            ('components/page-blocks/_filter-slider.html',{ <br>
-            "start1":"0", <br>
-            "start2":"30000", <br>
-            "min":"1000", <br>
-            "max":"100000", <br>
-            })
-
-        </code>
     </div>
 
 
@@ -109,17 +100,30 @@
 
 
 
-    <div class="modal" id="Modal">
+    <div class="modal" id="loginModal">
         <div class="modal__bg modal-bg _close-modal"></div>
         <div class="modal__dialog">
-            <div class="modal__top">
-                <div class="text32 medium-text">
-                    Title
-                </div>
-                <button class="close-btn _close-modal">
-                    <img src="img/close.svg" alt="">
-                </button>
+            <button class="close-btn _close-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.1866 11.5596C34.5941 11.9671 34.5941 12.6278 34.1866 13.0353L13.0349 34.187C12.6274 34.5945 11.9667 34.5945 11.5592 34.187C11.1517 33.7795 11.1517 33.1188 11.5592 32.7113L32.7109 11.5596C33.1184 11.1521 33.7791 11.1521 34.1866 11.5596Z" fill="#BCBCBC" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6947 34.1871C33.2872 34.5946 32.6265 34.5946 32.219 34.1871L11.0673 13.0354C10.6598 12.6278 10.6598 11.9672 11.0673 11.5597C11.4748 11.1521 12.1355 11.1521 12.543 11.5597L33.6947 32.7114C34.1022 33.1189 34.1022 33.7796 33.6947 34.1871Z" fill="#BCBCBC" />
+                </svg>
+            </button>
+            <div class="modal__title">
+                Вход или регистрация
             </div>
+            <form action="" class="login-form">
+                <div class="fg">
+                    <input type="text" placeholder="Введите номер телефона">
+                </div>
+                <button class="login-form__btn m-btn m-btn-blue">
+                    <span>Получить код</span>
+                </button>
+                <div class="login-form__bottom">
+                    <a href="" class="login-form__link login-form__link--dark">Войти по Логину или E-mail</a>
+                    <a href="" class="login-form__link">Регистрация</a>
+                </div>
+            </form>
         </div>
     </div>
 
